@@ -19,3 +19,15 @@ export const getAllProductsApi = async(AxiosPrivate,currentPage,limit) =>{
     return "Not get any Products";
   }
 }
+
+export const deleteProduct = async(AxiosPrivate, productName)=>{
+  try {
+    const response = await AxiosPrivate.delete("/products/remove",{
+      data:{productName}
+    });
+    console.log(response.data)
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+}
