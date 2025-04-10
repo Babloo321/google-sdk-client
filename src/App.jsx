@@ -1,12 +1,11 @@
 import Signup from "./components/auth/Signup"
 import Login from "./components/auth/LogIn"
 import { Route, Routes } from "react-router-dom"
-import ProtectedRoute from './utils/Protected.Route.jsx'
-
+// import ProtectedRoute from './utils/Protected.Route.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./components/home/Home.jsx"
-import MainPage from "./components/home/MainPage.jsx";
+// import Profile from "./components/home/Profile.jsx";
 import useAuth from "./hooks/useAuth.js";
 function App() {
   const { token } = useAuth();
@@ -17,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/main-page" element={<ProtectedRoute><MainPage /></ProtectedRoute>} />
+        {/* <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} /> */}
       </Routes>
 
       <ToastContainer

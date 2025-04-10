@@ -4,6 +4,7 @@ import useAuth from '../hooks/useAuth.js';
 import useAxiosPrivate from '../hooks/useAxiosPrivate.js';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Profile from './home/Profile.jsx';
 function LinkHandler() {
   const AxiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ function LinkHandler() {
             {/* <Link to="/Logout" className='text-3xl p-3 bg-gray-300 rounded-2xl font-extrabold'>After Login</Link> */}
             <button 
             onClick={handleLogout}
-            className='text-3xl p-3 bg-gray-300 rounded-2xl font-extrabold'>Logout</button>
+            className='text-3xl text-green-800 p-3 bg-gray-300 rounded-2xl font-extrabold'>Logout</button>
+            <Profile />
             </>
           ) : (
             <>
